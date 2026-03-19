@@ -10,4 +10,8 @@ function sanitizeInput(input) {
 
 function validatePassword(password) {
     return password.length >= 8;
+
+function sanitizeInput(input) {
+    return input.replace(/[<>]/g, '');  // защита от XSS
+# b22b0f9 (Critical security patch: use HTTPS and add input sanitization)
 }
